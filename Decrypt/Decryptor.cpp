@@ -54,13 +54,14 @@ string Decryptor::Decrypt(string &messageString, int iteration) {
 
 bool Decryptor::VerifyKey(string key){
     if(key.length() < 10){
+        cerr << "Key too short, please enter a longer key" << endl;
         return false;
     }
     string key_sorted = key;
     std::sort(key_sorted.begin(), key_sorted.end());
     for(std::size_t i = 1; i < key_sorted.length(); i++){
         if(key_sorted[i] == key_sorted[i-1]){
-            cerr << "There are doubles in this string" << endl;
+            cerr << "There are doubles in this key" << endl;
             return false;
         }
     }
