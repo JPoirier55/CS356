@@ -10,9 +10,9 @@ CS356 PA1_partA
 3. Spaces are neglected, as per the special forces code example, but periods are turned into 'XX', the decryption
     neglects these and leaves them as XX, same as the special forces example
 4. Keys must be less than 10 chars, and not have double chars, or the user will be prompted again
-5. File overwrites the given input file, does not save a copy of unencrypted data
-6. File must only use A-Z and a-z chars, with the exception of a period for message splits, all other chars will
+5. File must only use A-Z and a-z chars, with the exception of a period for message splits, all other chars will
     be removed on file read
+6. X's are kept at the end of the decrypted file if the file length%10 == 0
 
 *****************************
 
@@ -40,13 +40,13 @@ KEY# 1 - Please enter a valid 10 character key code:
 cornflakes
 KEY# 2 - Please enter a valid 10 character key code:
 blackhorse
-$ cat test.txt
+$ cat jake-poirier-encrypted-str.txt
 hntrdrzsuXeiyeagyhoepdmbdecXtreehahupXXbtienrmeglscwhdnosmntytelguXiea
 
-$ ./Decrypt/PA1_Decrypt test.txt
+$ ./Decrypt/PA1_Decrypt jake-poirier-encrypted-str.txt
 KEY# 1 - Please enter a valid 10 character key code:
 cornflakes
 KEY# 2 - Please enter a valid 10 character key code:
 blackhorse
-$ cat test.txt
+$ cat jake-poirier-decrypted-str.txt
 sendresupplytothebridgebythechurchXXammoneededurgentlywithmagazinesXXX

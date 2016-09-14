@@ -29,6 +29,6 @@ int main(int argc, char *argv[]) {
 
     string firstEncrypted = encryptor.Encrypt(message.messageString, 1);
     string secondEncrypted = encryptor.Encrypt(firstEncrypted, 2);
-    fileManager.WriteOutput(secondEncrypted, argv[1]);
+    fileManager.WriteOutput(secondEncrypted, "jake-poirier-encrypted-str.txt");
     return 1;
 }

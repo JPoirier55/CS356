@@ -30,6 +30,6 @@ int main(int argc, char *argv[]) {
 
     string firstDecrypted = decryptor.Decrypt(message.messageString, 1);
     string secondDecrypted = decryptor.Decrypt(firstDecrypted, 2);
-    fileManager.WriteOutput(secondDecrypted, argv[1]);
+    fileManager.WriteOutput(secondDecrypted, "jake-poirier-decrypted-str.txt");
     return 1;
 }
