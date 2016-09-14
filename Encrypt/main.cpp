@@ -1,3 +1,11 @@
+/*
+ * Jake Poirier
+ * CS356 PA1
+ * Transposition-encr
+ * 9/13/16
+ *
+ */
+
 #include <iostream>
 #include "FileManager.h"
 #include "Message.h"
