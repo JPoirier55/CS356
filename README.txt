@@ -25,9 +25,9 @@ $ make
 
 TO RUN:
 $ cd ..
-$ ./Encrypt/PA1_Encrypt <unencrypted_filename>
+$ ./Encrypt/transposition-encr <unencrypted_filename>
 
-$ ./Decrypt/PA1_Decrypt <encrypted_filename>
+$ ./Decrypt/transposition-decr <encrypted_filename>
 
 
 EXAMPLE WITH TEST.TXT:
@@ -35,7 +35,7 @@ EXAMPLE WITH TEST.TXT:
 $ cat test.txt
 send resupply to the bridge by the church. ammo needed urgently with magazines
 
-$ ./Encrypt/PA1_Encrypt test.txt
+$ ./Encrypt/transposition-encr test.txt
 KEY# 1 - Please enter a valid 10 character key code:
 cornflakes
 KEY# 2 - Please enter a valid 10 character key code:
@@ -43,7 +43,7 @@ blackhorse
 $ cat jake-poirier-encrypted-str.txt
 hntrdrzsuXeiyeagyhoepdmbdecXtreehahupXXbtienrmeglscwhdnosmntytelguXiea
 
-$ ./Decrypt/PA1_Decrypt jake-poirier-encrypted-str.txt
+$ ./Decrypt/transposition-decr jake-poirier-encrypted-str.txt
 KEY# 1 - Please enter a valid 10 character key code:
 cornflakes
 KEY# 2 - Please enter a valid 10 character key code:
