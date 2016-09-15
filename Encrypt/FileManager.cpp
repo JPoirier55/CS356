@@ -18,10 +18,9 @@ int FileManager::Read(istream& iss, string &messageString) {
 
             while (!iss.eof()) {
                 int t = iss.get();
-                if(t == 46){
-                    messageString+="XX";
-                }
-                else if(((t >= 65)&&(t <=91))||((t >=96)&&t<=122)){
+                if(t == 46) {
+                    messageString += "XX";
+                }else if(((t >= 65)&&(t <=91))||((t >=96)&&t<=122)||(t == 32)){
                     messageString+=char(t);
                 }
             }

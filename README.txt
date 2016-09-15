@@ -6,13 +6,13 @@ CS356 PA1_partA
 
 1. This program takes input from the user for each key
 2. Each key is used the same direction - EG if the user enters 'cornflakes' for key one, and 'blackhorse' for key 2
-    during encryption, the user for decryption must use 'cornflakes' for key one, and 'blachorse' for key 2
-3. Spaces are neglected, as per the special forces code example, but periods are turned into 'XX', the decryption
-    neglects these and leaves them as XX, same as the special forces example
+    during encryption, the user for decryption must use 'cornflakes' for key one, and 'blackhorse' for key 2
+3. Spaces are kept in the file, periods are used for breaks in messages like in special forces, which end up being 'XX'
+    in the encrypted message, and get removed on write file as a .
 4. Keys must be less than 10 chars, and not have double chars, or the user will be prompted again
 5. File must only use A-Z and a-z chars, with the exception of a period for message splits, all other chars will
     be removed on file read
-6. X's are kept at the end of the decrypted file if the file length%10 == 0
+6. X is kept at the end of the decrypted file to signal EOF
 
 *****************************
 

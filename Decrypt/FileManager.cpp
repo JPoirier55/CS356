@@ -21,7 +21,7 @@ int FileManager::Read(istream& iss, string &messageString) {
                 if(t == 46){
                     messageString+="XX";
                 }
-                else if(((t >= 65)&&(t <=91))||((t >=96)&&t<=122)){
+                else if(((t >= 65)&&(t <=91))||((t >=96)&&t<=122)||(t == 32)){
                     messageString+=char(t);
                 }
             }
@@ -31,11 +31,18 @@ int FileManager::Read(istream& iss, string &messageString) {
 }
 
 int FileManager::WriteOutput(string &encryptedMessage, string outputfilename){
+
+    for(size_t i = 1; i < encryptedMessage.size(); i++){
+        if(encryptedMessage[i-1] == 'X'){
+            if(encryptedMessage[i] == 'X'){
+                encryptedMessage[i-1] = '.';
+                encryptedMessage[i] = ' ';
+            }
+        }
+    }
     std::ofstream outputfile;
     outputfile.open(outputfilename);
-
     outputfile << encryptedMessage;
-
     outputfile.close();
     return 1;
 }
